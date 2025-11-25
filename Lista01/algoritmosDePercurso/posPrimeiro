@@ -7,13 +7,17 @@ posPrimeiro(raiz){
     while(true){
         if(u.esq != null){
             u = u.esq;
-            continue;
         }else if(u.dir != null){
             u = u.dir;
-            continue;
         }else{
             break;
         }
     }
     return u;
 }
+
+1. checa se a raiz não é nula
+2. entra em looping para descermos na arvore
+3. termos dentro do while umas verificações para sabermos se o nó atual possui filhos(esq ou direito)
+4. podemos descer em zigzag, mas é importante que a primeira verificação seja para o filho da esquerda
+5. quando finalmente achando uma folha que não possui filhos, quebramos nosso looping
