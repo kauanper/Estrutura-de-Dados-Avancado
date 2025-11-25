@@ -1,0 +1,17 @@
+10. Se incluíssemos também as sub-árvores vazias (λ) na saída do percurso em pré-ordem de uma árvore,
+ seríamos capazes de determinar unicamente a árvore original? Mostre como seria o desenho da árvore
+ cujo percurso é ⟨15,0,10,λ,λ,20,λ,λ,25,λ,5,λ,λ⟩ e indique onde há ambiguidade, caso houver.
+ OBS: Umafolha é umnócujas duas sub-árvores são vazias.
+
+                                                 15
+                                                /  \
+   ⟨15,0,10,λ,λ,20,λ,λ,25,λ,5,λ,λ⟩  =          0    25
+                                              / \     \
+                                            10  20     5
+
+Sim — se incluirmos os marcadores de sub-árvore vazia (λ) na saída em pré-ordem, a árvore fica unicamente determinada.
+Não há ambiguidade quando a sequência inclui os marcadores lambda, pois suas ocorrências informam a ausência de uma subarv,
+informação que permite o algoritmo de Pre-Order saber operação deve execultar. Em contraste, sem os marcadores lambda, a se-
+de pré-ordem [A, B] sem marcadores pode ser tanto:
+- A com filho esquerdo B, quanto
+- A com filho direito B.
