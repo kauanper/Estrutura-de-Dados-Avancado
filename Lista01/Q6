@@ -1,5 +1,3 @@
-pre-ordem: 4, 8, 7, 5, 9. 6, 3, 1, 0, 2
-em -ordem: 5, 9, 7, 8, 6, 4, 1, 3, 2, 0
 
                         4
                    /           \
@@ -11,4 +9,13 @@ em -ordem: 5, 9, 7, 8, 6, 4, 1, 3, 2, 0
           \
            9
 
+6. Considere os algoritmos de sucessor e predecessor de cada um dos percursos estudados. Para cada item
+ a seguir, liste a sequência de nós pelos quais as chamadas de algoritmos fornecidas passam na árvore
+ da Figura 2 na próxima página a partir do nó de valor informado até o nó desejado. Suponha que r
+ representa a raiz da referida árvore.
+ OBS: Desconsidere as buscas pelo valor passado para cada chamada
 
+ (a) Sucessor-Pré(r,9)
+    4 -> 8 -> 7 -> 5 -> 9
+
+ (b) Sucessor-Pré(r,2)
