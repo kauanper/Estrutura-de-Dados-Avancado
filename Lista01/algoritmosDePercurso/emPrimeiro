@@ -1,0 +1,13 @@
+emPrimeiro(raiz) {
+    if(raiz == null){
+        return null;
+    }
+
+    //vai até o filho mais à esquerda
+    u = raiz;
+    while(u.esq != null){
+        u = u.esq;
+    }
+
+    return u;
+}
