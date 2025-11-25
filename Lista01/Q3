@@ -1,3 +1,47 @@
- 3. Dadas duas árvores binárias T1 e T2, escreva um algoritmo que determina se essas árvores são iguais.
- Ouseja, se possuem o mesmo desenho e se os nós correspondentes possuem os mesmos valores.
+     3. Dadas duas árvores binárias T1 e T2, escreva um algoritmo que determina se essas árvores são iguais.
+     Ouseja, se possuem o mesmo desenho e se os nós correspondentes possuem os mesmos valores.
 
+boolean compara(raiz1, raiz2){
+
+    if (raiz1 == null && raiz2 == null){
+        return true
+    }
+
+    if (raiz1 == null || raiz2 == null){
+        return false
+    }
+
+    fila Q1
+    fila Q2
+    Q1.insere(raiz1)
+    Q2.insere(raiz2)
+
+    while (Q1 não está vazia e Q2 não está vazia){
+
+        u1 = Q1.remove()
+        u2 = Q2.remove()
+
+        // se valores forem diferentes → árvores diferentes
+        if (u1.chave != u2.chave){
+            return false
+        }
+
+        // ✔ verifica filhos à esquerda
+        if (u1.esq != null && u2.esq != null){
+            Q1.insere(u1.esq)
+            Q2.insere(u2.esq)
+        } else if ( !(u1.esq == null && u2.esq == null) ){
+            return false
+        }
+
+        // ✔ verifica filhos à direita
+        if (u1.dir != null && u2.dir != null){
+            Q1.insere(u1.dir)
+            Q2.insere(u2.dir)
+        } else if ( !(u1.dir == null && u2.dir == null) ){
+            return false
+        }
+    }
+
+    return true
+}
