@@ -22,7 +22,6 @@ preSucessor(no){
             return u.pai.dir
         }
 
-        // subir
         u = u.pai
     }
 
