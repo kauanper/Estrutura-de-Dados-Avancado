@@ -11,4 +11,6 @@ emPrimeiro(raiz) {
     return u;
 }
 
-olha apenas o da esq, pois se não tiver o proximo a ser processado seria a raiz da sub arv. que já recebemos de parametro
+1. checar se não samos nulo
+2. vamos descer a esquerda até o ultimo nó a esquerda
+3. vamos retorna esse ultimo nó a esrqueda ou a propria raiz

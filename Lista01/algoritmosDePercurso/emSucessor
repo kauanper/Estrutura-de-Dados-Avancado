@@ -21,3 +21,9 @@ emSucessor(no) {
 
     return u;  // pode ser null (se no era o maior da árvore)
 }
+
+1. vamos checar se não é nulo
+2. se tiver filho a direita vamos chamar o algoritmo emPrimeiro(pois ele vai percorrer a sub arv e retornar o mais esq ou a raiz)
+3. se não tem filho a dir vamos fazer um looping subindo os pais de cada nó
+4. vamos subir até que, ou u seja nulo ou atual não seja filho direito de seu pai(isso implica em atual ser a raiz de uma sub. arv a esquerda,
+logo o proximo nó a ser processado em ordem é seu pai)
