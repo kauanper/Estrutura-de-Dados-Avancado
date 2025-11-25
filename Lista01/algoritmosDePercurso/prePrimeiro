@@ -6,3 +6,6 @@ prePrimeiro(raiz){
     }
     retorn raiz;
 }
+
+1. checar se a raiz é nula
+2. se não for nula, ele é o proximo a ser processado

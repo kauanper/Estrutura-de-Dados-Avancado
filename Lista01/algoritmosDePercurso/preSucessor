@@ -28,3 +28,9 @@ preSucessor(no){
     // 4. Chegou na raiz e não achou sucessor
     return null
 }
+
+1. checar se nó é nulo
+2. checar se tem filho a esq, se tiver ele será o proximo
+3. checar se não tem a direita, se tiver ele será o proximo
+4. se não tem filho devemos subir entre os pais
+5. checar se samos filhos esquerdo e se nosso pai tem filho direito, pois ele será o proximo
