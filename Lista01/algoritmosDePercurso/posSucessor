@@ -10,11 +10,18 @@ posSucessor(no){
     u = no.pai
 
     if(u.esq == no){ ///checar se no é filho esq de u
+
         //checar se temos pai tem filho a direita
         if(u.dir != null){
             return posPrimeiro(u.dir)
         }
+
     }
     return u;
-
 }
+
+1. checar se não pe nulo
+2. checar se pai não é nulo(precisarmeos dele)
+3. checar se nó pe filho esq, pois isso implica em sucessor ser o filho direito se houver
+4. caso no seja filho, checamos se existe um filho direito, e se existir, usamos o algoritmo de posPrimeiro
+4. retornarmo u, caso ele não tenho entrado na condição passada, u será o pai
