@@ -1,0 +1,60 @@
+ 1. Produza algoritmos que:
+ (a) conte o número de elementos em uma árvore binária.
+ (b) retorne o maior valor armazenado como chave numa árvore binária. Suponha que os elementos
+ são todos não-negativos e retorne −1 caso a árvore seja vazia.
+
+ itemA(raiz){
+
+     if (raiz == null){
+         return 0
+     }
+
+     cont = 1
+     fila Q
+     Q.insere(raiz)
+
+     while (Q não está vazia){
+         u = Q.remove()
+
+         if (u.esq != null){
+             Q.insere(u.esq)
+             cont++
+         }
+         if (u.dir != null){
+             Q.insere(u.dir)
+             cont++
+         }
+     }
+
+     return cont
+ }
+
+
+itemB(raiz){
+
+    if (raiz == null){
+        return -1
+    }
+
+    maiorElemento = raiz.chave
+    fila Q
+    Q.insere(raiz)
+
+    while (Q não está vazia){
+        u = Q.remove()
+
+        if (u.chave > maiorElemento){
+            maiorElemento = u.chave
+        }
+
+        if (u.esq != null){
+            Q.insere(u.esq)
+        }
+
+        if (u.dir != null){
+            Q.insere(u.dir)
+        }
+    }
+
+    return maiorElemento
+}

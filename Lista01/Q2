@@ -1,0 +1,21 @@
+ 2. Dada uma árvore binária T e um valor x, retornar uma lista contendo todos os ancestrais de x em T
+ ordenados por nível (do mais alto para o mais baixo na árvore).
+
+ List<Nó> Ancestrais(x){
+    List<No> ancestrais = new ArrayList<>(); //começa vazia
+
+    if(x == null){
+        retorn null;
+    }
+
+    if(x.pai == null){
+        retorn ancestrais;
+    }
+
+    No atual = x.pai
+
+    while (atual != null){
+        ancestrais.add(0, atual) //sempre adicionar no inicio da arvore
+        atual = atual.pai
+    }
+ }
