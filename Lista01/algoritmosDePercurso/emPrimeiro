@@ -3,7 +3,6 @@ emPrimeiro(raiz) {
         return null;
     }
 
-    //vai até o filho mais à esquerda
     u = raiz;
     while(u.esq != null){
         u = u.esq;
@@ -11,3 +10,5 @@ emPrimeiro(raiz) {
 
     return u;
 }
+
+olha apenas o da esq, pois se não tiver o proximo a ser processado seria a raiz da sub arv. que já recebemos de parametro
