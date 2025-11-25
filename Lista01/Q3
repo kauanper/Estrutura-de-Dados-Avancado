@@ -1,0 +1,3 @@
+ 3. Dadas duas árvores binárias T1 e T2, escreva um algoritmo que determina se essas árvores são iguais.
+ Ouseja, se possuem o mesmo desenho e se os nós correspondentes possuem os mesmos valores.
+
