@@ -1,0 +1,20 @@
+posSucessor(no){
+    if(no == null){
+        return null;
+    }
+
+    //chacar se tem pai
+    if(no.pai == null){
+        return null;
+    }
+    u = no.pai
+
+    if(u.esq == no){ ///checar se no é filho esq de u
+        //checar se temos pai tem filho a direita
+        if(u.dir != null){
+            return posPrimeiro(u.dir)
+        }
+    }
+    return u;
+
+}
