@@ -1,0 +1,31 @@
+DADO UMA ARVORE RETORNA O PROXIMO NÓ A SER PROCESASDO EM UMA ARVORE UTLIZANDO O PRE-ORDEM
+
+preSucessor(no){
+
+    if (no == null){
+        return null
+    }
+
+    if (no.esq != null){ // 1. Se tem filho à esquerda → esse é o próximo
+        return no.esq
+    }
+
+    if (no.dir != null){ // 2. Se não tem esquerda, mas tem direita
+        return no.dir
+    }
+
+    // 3. Não tem filhos → subir procurando um pai cujo filho direito ainda não foi visitado
+    u = no
+    while (u.pai != null){
+
+        if (u == u.pai.esq && u.pai.dir != null){ // se u é filho esquerdo e o pai tem filho direito → esse é o sucessor
+            return u.pai.dir
+        }
+
+        // subir
+        u = u.pai
+    }
+
+    // 4. Chegou na raiz e não achou sucessor
+    return null
+}
