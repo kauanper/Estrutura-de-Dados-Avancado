@@ -1,0 +1,19 @@
+posPrimeiro(raiz){
+    if(raiz == null){
+        return null;
+    }
+
+    u = raiz
+    while(true){
+        if(u.esq != null){
+            u = u.esq;
+            continue;
+        }else if(u.dir != null){
+            u = u.dir;
+            continue;
+        }else{
+            break;
+        }
+    }
+    return u;
+}
