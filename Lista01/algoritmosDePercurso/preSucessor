@@ -6,26 +6,25 @@ preSucessor(no){
         return null
     }
 
-    if (no.esq != null){ // 1. Se tem filho à esquerda → esse é o próximo
+    if (no.esq != null){
         return no.esq
     }
 
-    if (no.dir != null){ // 2. Se não tem esquerda, mas tem direita
+    if (no.dir != null){
         return no.dir
     }
 
-    // 3. Não tem filhos → subir procurando um pai cujo filho direito ainda não foi visitado
+
     u = no
     while (u.pai != null){
 
-        if (u == u.pai.esq && u.pai.dir != null){ // se u é filho esquerdo e o pai tem filho direito → esse é o sucessor
+        if (u == u.pai.esq && u.pai.dir != null){
             return u.pai.dir
         }
 
         u = u.pai
     }
 
-    // 4. Chegou na raiz e não achou sucessor
     return null
 }
 

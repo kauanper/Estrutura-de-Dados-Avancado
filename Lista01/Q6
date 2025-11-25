@@ -16,6 +16,8 @@
  OBS: Desconsidere as buscas pelo valor passado para cada chamada
 
  (a) Sucessor-Pré(r,9)
-    4 -> 8 -> 7 -> 5 -> 9
+    9 -> 5 -> 7 -> 8 -> 6
 
  (b) Sucessor-Pré(r,2)
+    2 -> null
+
