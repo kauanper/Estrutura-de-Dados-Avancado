@@ -1,0 +1,23 @@
+emSucessor(no) {
+    if(no == null){
+        return null;
+    }
+
+    // Caso 1: tem filho à direita
+    if(no.dir != null){
+        return emPrimeiro(no.dir);
+    }
+
+    //subir ate q atual não seja filho direito de u (
+    // significa que a sub. arv esquerda foi processada
+    // e que u é o proximo nó a ser processado)
+
+    u = no.pai;
+    atual = no;
+    while(u != null && atual == u.dir){
+        atual = u;
+        u = u.pai;
+    }
+
+    return u;  // pode ser null (se no era o maior da árvore)
+}
