@@ -1,10 +1,8 @@
 DADA UMA ARVORE RETORNA O PRIMEIRO NÓ QUE DEVE SER PROCESSADO EM UMA ARVORE USANDO O PRÉ-ORDEM
 
-preSucesso(raiz){
-
+prePrimeiro(raiz){
     if ( raiz == null ){
         retorn null;
     }
-
     retorn raiz;
 }
