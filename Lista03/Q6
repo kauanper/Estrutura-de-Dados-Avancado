@@ -1,3 +1,5 @@
  6. Forneça uma sequência de 10 valores que, se inseridos em uma árvore AVL inicialmente vazia, não
  realizam qualquer rotação na árvore.
 
+
+50 - 40 - 60 - 30 - 35 - 70 - 55 - 20 - 80 - 36
