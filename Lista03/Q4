@@ -1,0 +1,13 @@
+            50
+          /    \
+        30      70
+       /  \      \
+     20   40     80
+    /
+   10
+
+
+5 -> LL     (simples a esq)
+90 -> RR    (simples a direita)
+75 -> RL    (dupla a dir)
+15 -> LR    (dupla a esq)
