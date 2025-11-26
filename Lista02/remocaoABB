@@ -1,0 +1,72 @@
+remove(raiz, x):
+
+    if raiz == null:
+        return λ
+
+    u = Busca(raiz, x)
+
+    if u == null:
+        return λ
+
+
+    // CASO 1: u é folha (sem filhos)
+    if u.esq == null AND u.dir == null:
+        if u == raiz:
+            raiz = null        // árvore fica vazia
+        else if u == u.pai.esq:
+            u.pai.esq = null
+        else
+            u.pai.dir = null
+        return raiz
+
+    // CASO 2: u tem apenas 1 filho
+    if u.esq == null OR u.dir == null:
+
+        // pega o filho existente
+        if u.esq != null:
+            filho = u.esq
+        else
+            filho = u.dir
+
+        // conecta o filho ao pai de u
+        filho.pai = u.pai
+
+        if u == raiz:
+            raiz = filho
+        else if u == u.pai.esq:
+            u.pai.esq = filho
+        else
+            u.pai.dir = filho
+
+        return raiz
+
+        // CASO 3: u tem 2 filhos
+        else:
+            //Encontra o sucessor (menor da subárvore direita)
+            s = u.dir
+            while s.esq != null:
+                s = s.esq     // anda tudo à esquerda
+
+            // 2. Copia o valor de s para u
+            u.chave = s.chave
+
+            // 3. Agora remove o sucessor (s)
+            // s tem no máximo 1 filho (NUNCA 2) pq ele é menor a esquerda, no maxio tem um filho a dir
+
+            // identifica o único filho (se existir)
+            if s.dir != null:
+                filho = s.dir
+            else:
+                filho = null
+
+            // conecta o filho ao pai de s
+            if filho != null:
+                filho.pai = s.pai
+
+            // agora ajusta o pai de s
+            if s == s.pai.esq:
+                s.pai.esq = filho
+            else
+                s.pai.dir = filho
+
+            return raiz
