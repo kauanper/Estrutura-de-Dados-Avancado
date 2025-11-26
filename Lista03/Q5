@@ -1,0 +1,5 @@
+5. Forneça uma sequência de 10 valores tais que, se inseridos em uma árvore AVL inicialmente vazia,
+ causarão o maior número possível de rotações dentre todas essas possíveis sequências. Ou seja, não
+ existe outra ordem de inserção dos mesmos valores que cause mais rotações que a sua ordem.
+
+ 20 - 21 - 22 - 23 - 24 - 25 - 26 - 27 - 28 - 29
